@@ -50,9 +50,7 @@ public class FileData implements Serializable {
     )
     private Date modifiedTime;
 
-    public FileData(MultipartFile file, String path, Long id) {
-        this.id = id;
-        this.path = path;
+    public FileData(MultipartFile file) {
         this.size = file.getSize();
         this.name = file.getOriginalFilename();
         this.extension = FilenameUtils.getExtension(file.getOriginalFilename());
